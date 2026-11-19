@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K 'n' B Clothing — WEAR IT. LOVE IT. | Maluti Luxury Streetwear</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cinzel, Cormorant Garamond, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Cinzel"', 'serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#09090B',
+                        charcoal: '#121216',
+                        surface: '#18181D',
+                        ivory: '#F8F6F0',
+                        champagne: '#E8E2D2',
+                        gold: '#D4AF37',
+                        goldLight: '#F3D46B',
+                        silver: '#D1D5DB',
+                        terracotta: '#C86D51',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom luxury metallic & editorial styles */
+        :root {
+            --accent-color: #D4AF37;
+            --accent-soft: rgba(212, 175, 55, 0.16);
+        }
+
+        body {
+            background-color: #09090B;
+            color: #F8F6F0;
+        }
+
+        .metallic-gold-text {
+            background: linear-gradient(135deg, #FFF3B0 0%, #D4AF37 45%, #9E7316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metallic-silver-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 48%, #64748B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .luxury-gold-btn {
+            background: linear-gradient(135deg, #F3D46B 0%, var(--accent-color) 55%, #A67C1E 100%);
+            color: #09090B;
+        }
+
+        .luxury-gold-btn:hover {
+            filter: brightness(1.08);
+        }
+
+        .subtle-grid {
+            background-image:
+                radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.12), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(209, 213, 219, 0.08), transparent 45%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A32;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-ivory font-sans antialiased selection:bg-gold selection:text-obsidian overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-charcoal border-b border-gold/25 text-champagne text-[11px] sm:text-xs tracking-[0.18em] uppercase py-2.5 px-4 text-center font-medium">
+        <span class="text-gold font-extrabold">WEAR IT. LOVE IT.</span> &nbsp;|&nbsp;
+        <span>Free Lesotho &amp; Cross-Border Courier Over <strong id="top-threshold-text" class="text-gold">M 1,500.00</strong></span>
+        <span class="hidden sm:inline"> &nbsp;|&nbsp; Priced in <strong class="text-gold">Maluti (LSL / M)</strong></span>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header id="navbar" class="sticky top-0 z-40 bg-obsidian/95 backdrop-blur-md border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-2">
+
+                <!-- Left: Mobile Menu + Brand Emblem Logo -->
+                <div class="flex items-center gap-3 min-w-0">
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 -ml-2 rounded-xl text-ivory hover:text-gold hover:bg-white/5 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+
+                    <a href="#home" class="flex items-center gap-3 group min-w-0">
+                        <div class="brand-logo-slot w-12 h-12 sm:w-14 sm:h-14 rounded-2xl border border-gold/45 bg-charcoal/90 shadow-lg shadow-gold/10 overflow-hidden flex items-center justify-center shrink-0 group-hover:border-gold transition-colors">
+                            <!-- Emblem rendered dynamically -->
+                        </div>
+                        <div class="truncate">
+                            <div id="nav-brand-name" class="font-display text-base sm:text-xl font-extrabold tracking-wide metallic-gold-text truncate">
+                                K 'n' B Clothing
+                            </div>
+                            <div id="nav-tagline" class="text-[9px] sm:text-[10px] uppercase tracking-[0.26em] text-silver/80 font-semibold truncate">
+                                WEAR IT. LOVE IT.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Center Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-7">
+                    <a href="#home" class="text-xs font-bold uppercase tracking-[0.18em] text-ivory/85 hover:text-gold transition-colors">Home</a>
+                    <a href="#catalog" class="text-xs font-bold uppercase tracking-[0.18em] text-ivory/85 hover:text-gold transition-colors">Catalog</a>
+                    <a href="#pillars" class="text-xs font-bold uppercase tracking-[0.18em] text-ivory/85 hover:text-gold transition-colors">Why K 'n' B</a>
+                    <a href="#studio" class="text-xs font-bold uppercase tracking-[0.18em] text-ivory/85 hover:text-gold transition-colors">Add Products</a>
+                    <a href="#contact" class="text-xs font-bold uppercase tracking-[0.18em] text-ivory/85 hover:text-gold transition-colors">Stores</a>
+                </nav>
+
+                <!-- Right Actions: Currency Mode, Customize Studio, Export HTML, Bag -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <!-- Currency Display Selector (Defaults to Maluti M) -->
+                    <div class="hidden sm:flex items-center bg-charcoal border border-gold/25 rounded-full p-1">
+                        <button id="curr-m-btn" onclick="setCurrencyDisplay('M')" class="px-2.5 py-1 rounded-full text-[11px] font-extrabold tracking-wider bg-gold text-obsidian transition-all" title="Show Maluti (M / LSL)">
+                            M (LSL)
+                        </button>
+                        <button id="curr-both-btn" onclick="setCurrencyDisplay('BOTH')" class="px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider text-silver hover:text-ivory transition-all" title="Show Maluti & Rands (1:1)">
+                            M / R
+                        </button>
+                    </div>
+
+                    <button onclick="openStudioModal('product')" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-gold/45 bg-charcoal hover:border-gold text-gold text-xs font-bold uppercase tracking-wider transition-all">
+                        <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+                        <span>Add Product</span>
+                    </button>
+
+                    <button onclick="openStudioModal('branding')" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-white/15 bg-surface hover:border-gold/50 text-ivory text-xs font-bold uppercase tracking-wider transition-all" title="Customize Emblem, Theme & Export HTML">
+                        <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-gold"></i>
+                        <span class="hidden sm:inline">Customize</span>
+                    </button>
+
+                    <button id="open-cart-btn" aria-label="Shopping Bag" class="relative p-2.5 sm:px-4 sm:py-2 rounded-full luxury-gold-btn font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-gold/15 transition-all">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span class="hidden sm:inline">Bag</span>
+                        <span id="cart-count-badge" class="bg-obsidian text-gold text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal border-b border-gold/20 px-5 py-5 space-y-3">
+            <a href="#home" class="mobile-link block text-xs font-bold uppercase tracking-widest text-ivory hover:text-gold py-1">Home</a>
+            <a href="#catalog" class="mobile-link block text-xs font-bold uppercase tracking-widest text-ivory hover:text-gold py-1">Streetwear Catalog</a>
+            <a href="#pillars" class="mobile-link block text-xs font-bold uppercase tracking-widest text-ivory hover:text-gold py-1">Brand Pillars</a>
+            <a href="#studio" class="mobile-link block text-xs font-bold uppercase tracking-widest text-ivory hover:text-gold py-1">Add &amp; Manage Products</a>
+            <a href="#contact" class="mobile-link block text-xs font-bold uppercase tracking-widest text-ivory hover:text-gold py-1">Contact &amp; Stores</a>
+            <div class="pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                <button onclick="setCurrencyDisplay('M'); closeMobileMenu();" class="px-3 py-1.5 rounded-full bg-gold text-obsidian text-[11px] font-extrabold">Maluti (M)</button>
+                <button onclick="setCurrencyDisplay('BOTH'); closeMobileMenu();" class="px-3 py-1.5 rounded-full bg-surface text-silver border border-white/15 text-[11px] font-bold">Show Maluti &amp; Rands</button>
+                <button onclick="openStudioModal('product'); closeMobileMenu();" class="px-3 py-1.5 rounded-full bg-surface text-gold border border-gold/40 text-[11px] font-bold">+ Add Product</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section id="home" class="relative subtle-grid border-b border-gold/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                <!-- Left Editorial Copy -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-charcoal border border-gold/35">
+                        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                        <span id="hero-badge-text" class="text-[11px] uppercase tracking-[0.22em] text-gold font-bold">Royal Streetwear &bull; Priced in Maluti (LSL)</span>
+                    </div>
+
+                    <h1 id="hero-headline" class="font-display text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] tracking-wide">
+                        <span class="metallic-silver-text">K 'n' B</span> <span class="metallic-gold-text">CLOTHING</span>
+                    </h1>
+
+                    <p id="hero-tagline-banner" class="font-serif italic text-2xl sm:text-3xl text-gold tracking-wider">
+                        "WEAR IT. LOVE IT."
+                    </p>
+
+                    <p id="hero-subheadline" class="text-champagne/80 text-base sm:text-lg max-w-2xl leading-relaxed font-light">
+                        Crafted for bold confidence in Lesotho and beyond. Explore heavyweight tees, structured outerwear, relaxed denim, and statement accessories—all priced transparently in <strong class="text-gold font-semibold">Maluti (M)</strong>.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-3.5 pt-2">
+                        <a href="#catalog" class="luxury-gold-btn px-7 py-4 rounded-full text-xs uppercase tracking-[0.2em] font-black shadow-xl shadow-gold/15 transition-all inline-flex items-center gap-2">
+                            <span>Shop Collection</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <button onclick="openStudioModal('product')" class="px-6 py-4 rounded-full bg-charcoal hover:bg-surface border border-gold/45 text-gold text-xs uppercase tracking-[0.18em] font-extrabold transition-all inline-flex items-center gap-2">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            <span>Add Your Product</span>
+                        </button>
+                        <button onclick="exportCustomizedHTML()" class="px-5 py-4 rounded-full bg-surface hover:bg-charcoal border border-white/15 text-ivory text-xs uppercase tracking-[0.16em] font-bold transition-all inline-flex items-center gap-2" title="Download standalone customized HTML file">
+                            <i data-lucide="download" class="w-4 h-4 text-gold"></i>
+                            <span>Export HTML</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Luxury Emblem Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-b from-charcoal to-obsidian border border-gold/40 p-6 sm:p-8 shadow-2xl shadow-gold/10">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-[0.24em] text-gold font-bold">Official Crest Emblem</span>
+                            <button onclick="openStudioModal('branding')" class="text-[11px] text-silver hover:text-gold underline font-semibold inline-flex items-center gap-1">
+                                <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+                                <span>Change Emblem</span>
+                            </button>
+                        </div>
+
+                        <div class="aspect-square w-full max-w-[360px] mx-auto rounded-2xl bg-white/95 p-4 flex items-center justify-center shadow-inner overflow-hidden relative">
+                            <div class="brand-logo-slot w-full h-full flex items-center justify-center">
+                                <!-- Emblem rendered dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                            <div>
+                                <p class="text-silver/70">Currency Mode</p>
+                                <p id="hero-currency-status" class="font-bold text-gold mt-0.5">Maluti (M 0.00 / LSL)</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-silver/70">Catalog Items</p>
+                                <p id="hero-product-count" class="font-bold text-ivory mt-0.5">6 Pieces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Brand Pillars Strip ("Trendy Fashion • Premium Quality • Affordable Style • Shop Smart") -->
+    <section id="pillars" class="bg-charcoal border-b border-gold/20 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-obsidian/70 border border-gold/20 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/40 text-gold flex items-center justify-center shrink-0">
+                        <i data-lucide="shirt" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-sm font-extrabold uppercase tracking-wider text-gold">Trendy Fashion</h3>
+                        <p class="text-xs text-silver/80 mt-1 leading-relaxed">Fresh streetwear silhouettes, bold graphics, and seasonal drops tailored to stand out.</p>
+                    </div>
+                </div>
+
+                <div class="bg-obsidian/70 border border-gold/20 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/40 text-gold flex items-center justify-center shrink-0">
+                        <i data-lucide="gem" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-sm font-extrabold uppercase tracking-wider text-gold">Premium Quality</h3>
+                        <p class="text-xs text-silver/80 mt-1 leading-relaxed">Heavyweight fabrics, durable stitching, and rich finishes built to last wear after wear.</p>
+                    </div>
+                </div>
+
+                <div class="bg-obsidian/70 border border-gold/20 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/40 text-gold flex items-center justify-center shrink-0">
+                        <i data-lucide="star" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-sm font-extrabold uppercase tracking-wider text-gold">Affordable Style</h3>
+                        <p class="text-xs text-silver/80 mt-1 leading-relaxed">Luxury aesthetic with honest, accessible Maluti (M) pricing across every collection.</p>
+                    </div>
+                </div>
+
+                <div class="bg-obsidian/70 border border-gold/20 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/40 text-gold flex items-center justify-center shrink-0">
+                        <i data-lucide="thumbs-up" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-sm font-extrabold uppercase tracking-wider text-gold">Shop Smart</h3>
+                        <p class="text-xs text-silver/80 mt-1 leading-relaxed">Quick size selection, instant bag totals in Maluti, and direct WhatsApp order checkout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Product Catalog Section -->
+    <section id="catalog" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+            <div>
+                <span class="text-xs uppercase tracking-[0.26em] text-gold font-bold block mb-2">Curated Drop &bull; Maluti (M)</span>
+                <h2 class="font-display text-3xl sm:text-5xl font-black tracking-wide">
+                    <span class="metallic-silver-text">STREETWEAR</span> <span class="metallic-gold-text">CATALOG</span>
+                </h2>
+            </div>
+
+            <!-- Search, Sort & Add Product -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <div class="relative flex-1 sm:w-64">
+                    <i data-lucide="search" class="w-4 h-4 text-silver/60 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                    <input
+                        type="text"
+                        id="catalog-search"
+                        placeholder="Search products..."
+                        class="w-full pl-10 pr-4 py-2.5 rounded-full bg-charcoal border border-white/15 text-xs font-medium text-ivory placeholder-silver/50 focus:outline-none focus:border-gold transition-colors"
+                    >
+                </div>
+
+                <select id="catalog-sort" aria-label="Sort products" class="px-4 py-2.5 rounded-full bg-charcoal border border-white/15 text-xs font-bold uppercase tracking-wider text-ivory focus:outline-none focus:border-gold cursor-pointer">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="price-asc">Price: Low to High (M)</option>
+                    <option value="price-desc">Price: High to Low (M)</option>
+                    <option value="name-asc">Name: A to Z</option>
+                </select>
+
+                <button onclick="openStudioModal('product')" class="luxury-gold-btn px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-md">
+                    <i data-lucide="plus" class="w-4 h-4"></i>
+                    <span>Add Product</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div id="category-tabs" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-8 border-b border-white/10">
+            <!-- Populated dynamically with All + unique categories -->
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            <!-- Product cards injected by JS -->
+        </div>
+    </section>
+
+    <!-- Inline Quick Studio & Product Manager Band -->
+    <section id="studio" class="py-16 bg-charcoal/70 border-y border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.24em] text-gold font-bold">Store Owner Controls</span>
+                    <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-ivory mt-1">Customization &amp; Product Manager</h2>
+                    <p class="text-xs sm:text-sm text-silver/75 mt-1">Add your own clothing items, upload your emblem/product photos, set Maluti prices, and export your standalone HTML file.</p>
+                </div>
+                <div class="flex flex-wrap gap-2.5">
+                    <button onclick="openStudioModal('product')" class="luxury-gold-btn px-5 py-3 rounded-full text-xs uppercase tracking-wider font-black inline-flex items-center gap-2">
+                        <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                        <span>New Product Form</span>
+                    </button>
+                    <button onclick="openStudioModal('branding')" class="px-5 py-3 rounded-full bg-surface hover:bg-obsidian border border-gold/40 text-gold text-xs uppercase tracking-wider font-extrabold inline-flex items-center gap-2">
+                        <i data-lucide="image" class="w-4 h-4"></i>
+                        <span>Logo &amp; Brand Settings</span>
+                    </button>
+                    <button onclick="exportCustomizedHTML()" class="px-5 py-3 rounded-full bg-obsidian hover:bg-surface border border-white/20 text-ivory text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4 text-gold"></i>
+                        <span>Export Customized HTML</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Inventory Management Table/Cards -->
+            <div class="bg-obsidian/90 border border-white/10 rounded-3xl p-5 sm:p-6 overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-display text-sm sm:text-base font-bold uppercase tracking-wider text-gold">Active Store Products (<span id="manager-item-count">0</span>)</h3>
+                    <button onclick="resetToDefaultStore()" class="text-xs text-silver/70 hover:text-terracotta underline font-semibold">Reset Default Catalog</button>
+                </div>
+
+                <div id="manage-products-list" class="divide-y divide-white/10">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Store Info -->
+    <footer id="contact" class="bg-obsidian pt-16 pb-12 border-t border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="brand-logo-slot w-14 h-14 rounded-2xl border border-gold/40 bg-charcoal overflow-hidden flex items-center justify-center shrink-0"></div>
+                        <div>
+                            <div id="footer-brand-name" class="font-display text-xl font-extrabold metallic-gold-text">K 'n' B Clothing</div>
+                            <div id="footer-tagline" class="text-[11px] uppercase tracking-[0.22em] text-gold font-semibold">WEAR IT. LOVE IT.</div>
+                        </div>
+                    </div>
+                    <p id="footer-about-text" class="text-xs sm:text-sm text-silver/75 leading-relaxed">
+                        Trendy Fashion &bull; Premium Quality &bull; Affordable Style &bull; Shop Smart. Crafted for elevated everyday streetwear priced in Maluti (M).
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-xs uppercase tracking-[0.22em] text-gold font-extrabold mb-4">Store &amp; WhatsApp Orders</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-silver/80">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                            <span id="footer-location">Kingsway Road, Maseru 100, Lesotho</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-gold shrink-0"></i>
+                            <span id="footer-whatsapp">+266 5800 0000</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="mail" class="w-4 h-4 text-gold shrink-0"></i>
+                            <span id="footer-email">orders@knbclothing.co.ls</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-xs uppercase tracking-[0.22em] text-gold font-extrabold mb-4">Host &amp; Customize</h4>
+                    <p class="text-xs text-silver/75 leading-relaxed mb-4">
+                        Customize your emblem, add or edit products in Maluti, and export a ready-to-host <code class="text-gold">index.html</code> file for your root domain (e.g. <code class="text-silver">http://example.com/</code>).
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="openStudioModal('branding')" class="px-4 py-2 rounded-full bg-charcoal hover:bg-surface border border-gold/40 text-gold text-xs font-bold">Upload Emblem</button>
+                        <button onclick="exportCustomizedHTML()" class="luxury-gold-btn px-4 py-2 rounded-full text-xs font-black">Download index.html</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-silver/60">
+                <p>&copy; <span id="copyright-year">2026</span> <span id="copyright-brand">K 'n' B Clothing</span>. All rights reserved. Prices in Maluti (LSL / M).</p>
+                <p class="text-gold/80 font-semibold tracking-wider uppercase text-[11px]">Trendy Fashion &bull; Premium Quality &bull; Affordable Style &bull; Shop Smart</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal -->
+    <div id="quickview-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-xs">
+        <div class="bg-charcoal border border-gold/35 rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative">
+            <button onclick="closeQuickView()" aria-label="Close Quick View" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-obsidian/90 hover:bg-gold text-ivory hover:text-obsidian flex items-center justify-center border border-white/15 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="quickview-body" class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Customization Studio & Product Manager Modal -->
+    <div id="studio-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-charcoal border border-gold/40 rounded-3xl max-w-3xl w-full p-5 sm:p-8 shadow-2xl my-auto max-h-[92vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div>
+                    <span class="text-[10px] uppercase tracking-[0.24em] text-gold font-extrabold">K 'n' B Storefront Builder</span>
+                    <h3 class="font-display text-xl sm:text-2xl font-black text-ivory mt-0.5">Customization &amp; Product Studio</h3>
+                </div>
+                <button onclick="closeStudioModal()" aria-label="Close Studio" class="p-2 rounded-full bg-surface hover:bg-gold text-ivory hover:text-obsidian transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Studio Tabs -->
+            <div class="flex gap-2 mt-5 border-b border-white/10 pb-3">
+                <button id="tab-btn-product" onclick="switchStudioTab('product')" class="px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider luxury-gold-btn">
+                    + Add / Edit Product
+                </button>
+                <button id="tab-btn-branding" onclick="switchStudioTab('branding')" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-surface text-silver hover:text-ivory border border-white/10">
+                    Emblem Logo &amp; Brand
+                </button>
+            </div>
+
+            <!-- Tab 1: Add / Edit Product Form -->
+            <div id="studio-tab-product" class="mt-5">
+                <form id="product-form" class="space-y-4">
+                    <input type="hidden" id="edit-product-id">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Product Name *</label>
+                            <input type="text" id="prod-name" required placeholder="e.g. Royal Crest Heavy Tee" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Category *</label>
+                            <input type="text" id="prod-category" list="category-suggestions" required placeholder="e.g. Graphic Tees" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                            <datalist id="category-suggestions">
+                                <option value="Graphic Tees">
+                                <option value="Hoodies & Outerwear">
+                                <option value="Denim">
+                                <option value="Accessories">
+                                <option value="Sets & Tracksuits">
+                            </datalist>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Price in Maluti (M) *</label>
+                            <input type="number" id="prod-price" step="0.01" min="1" required placeholder="450.00" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Sizes (comma separated)</label>
+                            <input type="text" id="prod-sizes" value="S, M, L, XL" placeholder="S, M, L, XL" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Badge Label</label>
+                            <input type="text" id="prod-badge" placeholder="New Drop / Best Seller" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                        </div>
+                    </div>
+
+                    <!-- Product Image: URL or Direct File Upload -->
+                    <div class="bg-obsidian/70 border border-white/10 rounded-2xl p-4 space-y-3">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gold">Product Image (URL or Upload Photo)</label>
+                            <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface hover:bg-gold text-ivory hover:text-obsidian border border-gold/30 text-xs font-bold transition-colors w-fit">
+                                <i data-lucide="upload" class="w-3.5 h-3.5"></i>
+                                <span>Upload Image File</span>
+                                <input type="file" id="prod-image-file" accept="image/*" class="hidden">
+                            </label>
+                        </div>
+                        <input type="text" id="prod-image-url" placeholder="https://... or uploaded image data" class="w-full px-4 py-2.5 rounded-xl bg-charcoal border border-white/15 text-xs text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                        <div class="flex items-center gap-3">
+                            <img id="prod-image-preview" src="https://placehold.co/120x140/18181D/D4AF37?text=Preview" alt="Product Preview" class="w-16 h-20 object-cover rounded-xl border border-gold/30 bg-surface shrink-0">
+                            <p class="text-[11px] text-silver/70 leading-relaxed">
+                                Tip: Paste an image link or upload a photo from your device. Uploaded images are stored in your browser and included when you click <strong>Export Customized HTML</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1.5">Description</label>
+                        <textarea id="prod-description" rows="2" placeholder="Describe fabric weight, fit, or styling notes..." class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory placeholder-silver/40 focus:outline-none focus:border-gold"></textarea>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                        <button type="button" onclick="clearProductForm()" class="px-4 py-2.5 rounded-full bg-surface hover:bg-obsidian border border-white/15 text-xs font-bold text-silver">
+                            Clear Form
+                        </button>
+                        <button type="submit" id="save-product-submit-btn" class="luxury-gold-btn px-7 py-3 rounded-full text-xs uppercase tracking-wider font-black shadow-lg">
+                            Save Product to Store
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Tab 2: Emblem Logo & Brand Settings -->
+            <div id="studio-tab-branding" class="hidden mt-5 space-y-5">
+                <!-- Logo Uploader ("K’n’B Clothing Luxury Emblem.png") -->
+                <div class="bg-obsidian/80 border border-gold/30 rounded-2xl p-4 sm:p-5 space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                            <h4 class="font-display text-sm font-extrabold text-gold uppercase tracking-wider">K 'n' B Luxury Emblem Logo</h4>
+                            <p class="text-xs text-silver/75 mt-0.5">Upload your <strong>K’n’B Clothing Luxury Emblem.png</strong> or paste an image URL/data URI.</p>
+                        </div>
+                        <label class="cursor-pointer luxury-gold-btn px-4 py-2.5 rounded-full text-xs font-black inline-flex items-center gap-2 shrink-0">
+                            <i data-lucide="image-plus" class="w-4 h-4"></i>
+                            <span>Choose Emblem File</span>
+                            <input type="file" id="emblem-file-input" accept="image/*" class="hidden">
+                        </label>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                        <div class="w-24 h-24 rounded-2xl bg-white p-2 border border-gold/40 flex items-center justify-center shrink-0 overflow-hidden">
+                            <img id="emblem-studio-preview" src="" alt="Emblem Preview" class="w-full h-full object-contain hidden">
+                            <span id="emblem-studio-placeholder" class="text-[10px] font-bold text-obsidian text-center leading-tight">Crest Fallback Active</span>
+                        </div>
+                        <div class="flex-1 w-full space-y-2">
+                            <input type="text" id="brand-logo-input" placeholder="Paste Emblem image URL or uploaded file..." class="w-full px-3.5 py-2 rounded-xl bg-charcoal border border-white/15 text-xs text-ivory placeholder-silver/40 focus:outline-none focus:border-gold">
+                            <div class="flex items-center gap-3">
+                                <button type="button" onclick="clearCustomEmblem()" class="text-xs text-silver/70 hover:text-terracotta underline font-semibold">Use Built-In Royal Crest Fallback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Details & Currency Display -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">Brand Name</label>
+                        <input type="text" id="brand-name-input" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">Tagline</label>
+                        <input type="text" id="brand-tagline-input" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">WhatsApp Number (for Orders)</label>
+                        <input type="text" id="brand-whatsapp-input" placeholder="26658000000" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">Free Shipping Threshold (Maluti M)</label>
+                        <input type="number" id="brand-threshold-input" min="0" step="50" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">Store Location</label>
+                        <input type="text" id="brand-location-input" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-white/15 text-sm text-ivory focus:outline-none focus:border-gold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-champagne mb-1">Accent Gold Tone</label>
+                        <div class="flex items-center gap-3">
+                            <input type="color" id="brand-accent-input" value="#D4AF37" class="w-12 h-10 rounded-xl bg-obsidian border border-white/15 cursor-pointer">
+                            <span class="text-xs text-silver/75">Primary gold highlight color</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                    <label class="flex items-center gap-2.5 text-xs font-bold text-champagne cursor-pointer">
+                        <input type="checkbox" id="brand-show-rands-input" class="w-4 h-4 accent-amber-400">
+                        <span>Also show Rands (R) beside Maluti (M)</span>
+                    </label>
+
+                    <button type="button" onclick="saveBrandingSettings()" class="luxury-gold-btn px-6 py-3 rounded-full text-xs uppercase tracking-wider font-black">
+                        Save Brand Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide-Out Shopping Bag Drawer -->
+    <div id="cart-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-charcoal border-l border-gold/30 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+        <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between bg-obsidian">
+            <div class="flex items-center gap-2.5">
+                <i data-lucide="shopping-bag" class="w-5 h-5 text-gold"></i>
+                <h3 class="font-display text-lg font-extrabold text-ivory">Shopping Bag</h3>
+                <span id="drawer-items-count" class="text-xs text-silver/70 font-semibold">(0)</span>
+            </div>
+            <button id="close-cart-btn" aria-label="Close Bag" class="p-2 rounded-full hover:bg-white/10 text-ivory transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Free Courier Progress -->
+        <div class="px-6 py-3 bg-surface/80 border-b border-white/10">
+            <p id="cart-shipping-banner" class="text-xs text-champagne font-medium mb-1.5"></p>
+            <div class="w-full h-1.5 rounded-full bg-obsidian overflow-hidden">
+                <div id="cart-shipping-bar" class="h-full luxury-gold-btn transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items -->
+        <div id="cart-items-list" class="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+            <!-- Populated dynamically -->
+        </div>
+
+        <!-- Cart Footer & WhatsApp Checkout -->
+        <div class="p-6 bg-obsidian border-t border-gold/25 space-y-4">
+            <div class="space-y-1.5 text-xs">
+                <div class="flex justify-between text-silver/80">
+                    <span>Courier Delivery</span>
+                    <span id="cart-courier-fee" class="font-bold text-ivory">M 0.00</span>
+                </div>
+                <div class="flex justify-between items-baseline pt-2 border-t border-white/10">
+                    <span class="uppercase tracking-widest font-extrabold text-champagne">Total (Maluti)</span>
+                    <span id="cart-total-price" class="font-display text-xl font-black text-gold">M 0.00</span>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <input type="text" id="customer-name-input" placeholder="Your Name (optional for WhatsApp order)" class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal border border-white/15 text-xs text-ivory placeholder-silver/45 focus:outline-none focus:border-gold">
+                <button id="whatsapp-checkout-btn" onclick="checkoutViaWhatsApp()" class="w-full py-4 rounded-full luxury-gold-btn text-xs uppercase tracking-[0.2em] font-black shadow-lg flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order on WhatsApp (Maluti)</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 z-50 bg-charcoal border border-gold/50 text-ivory px-5 py-3 rounded-full shadow-2xl flex items-center gap-2.5 pointer-events-none">
+        <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+        <span id="toast-text" class="text-xs font-bold tracking-wide"></span>
+    </div>
+
+    <script>
+        // =========================================================================
+        // K 'n' B CLOTHING — STATE, MALUTI PRICING, PRODUCT MANAGER & HTML EXPORTER
+        // =========================================================================
+
+        const STORAGE_KEYS = {
+            PRODUCTS: 'knb_clothing_products_v1',
+            SETTINGS: 'knb_clothing_settings_v1',
+            CART: 'knb_clothing_cart_v1'
+        };
+
+        const DEFAULT_PRODUCTS = [
+            {
+                id: 101,
+                name: "Royal Crest Heavyweight Boxy Tee",
+                category: "Graphic Tees",
+                price: 450,
+                sizes: ["S", "M", "L", "XL"],
+                badge: "Best Seller",
+                description: "280 GSM combed cotton boxy tee with gold & silver crown crest detail. WEAR IT. LOVE IT.",
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 102,
+                name: "Sovereign Gold Fleece Hoodie",
+                category: "Hoodies & Outerwear",
+                price: 850,
+                sizes: ["S", "M", "L", "XL"],
+                badge: "New Drop",
+                description: "480 GSM brushed fleece hoodie engineered for crisp mornings and statement street layering.",
+                image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 103,
+                name: "Obsidian Relaxed Street Denim",
+                category: "Denim",
+                price: 920,
+                sizes: ["S", "M", "L", "XL"],
+                badge: "Limited",
+                description: "Washed charcoal denim with relaxed straight drape and reinforced contrast stitching.",
+                image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 104,
+                name: "Kingsway Washed Oversized Tee",
+                category: "Graphic Tees",
+                price: 420,
+                sizes: ["S", "M", "L", "XL"],
+                badge: "Trendy Fashion",
+                description: "Vintage charcoal wash with drop shoulders and breathable cotton jersey comfort.",
+                image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 105,
+                name: "Highland Quilted Utility Jacket",
+                category: "Hoodies & Outerwear",
+                price: 1180,
+                sizes: ["S", "M", "L", "XL"],
+                badge: "Premium Quality",
+                description: "Structured outerwear piece combining sleek matte finish with multi-pocket utility.",
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 106,
+                name: "Signature Ribbed Crown Beanie",
+                category: "Accessories",
+                price: 240,
+                sizes: ["ONE SIZE"],
+                badge: "Shop Smart",
+                description: "Warm knit accessory in deep obsidian with gold emblem styling.",
+                image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        const DEFAULT_SETTINGS = {
+            brandName: "K 'n' B Clothing",
+            tagline: "WEAR IT. LOVE IT.",
+            whatsapp: "26658000000",
+            email: "orders@knbclothing.co.ls",
+            location: "Kingsway Road, Maseru 100, Lesotho",
+            about: "Trendy Fashion • Premium Quality • Affordable Style • Shop Smart. Crafted for elevated everyday streetwear priced in Maluti (M).",
+            accentColor: "#D4AF37",
+            freeShippingThreshold: 1500,
+            courierFee: 100,
+            currencyDisplay: "M", // 'M' (Maluti LSL) or 'BOTH' (Maluti + 1:1 Rand)
+            logoDataUrl: "" // User can upload "K’n’B Clothing Luxury Emblem.png" or set URL
+        };
+
+        let products = [];
+        let settings = { ...DEFAULT_SETTINGS };
+        let cart = [];
+        let activeCategory = "All";
+        let searchTerm = "";
+        let sortMode = "featured";
+        let selectedSizes = {};
+
+        // --- Persistence Helpers ---
+        function loadFromStorage() {
+            try {
+                const savedProducts = localStorage.getItem(STORAGE_KEYS.PRODUCTS);
+                const savedSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS);
+                const savedCart = localStorage.getItem(STORAGE_KEYS.CART);
+
+                products = savedProducts ? JSON.parse(savedProducts) : [...DEFAULT_PRODUCTS];
+                settings = savedSettings ? { ...DEFAULT_SETTINGS, ...JSON.parse(savedSettings) } : { ...DEFAULT_SETTINGS };
+                cart = savedCart ? JSON.parse(savedCart) : [];
+            } catch (err) {
+                products = [...DEFAULT_PRODUCTS];
+                settings = { ...DEFAULT_SETTINGS };
+                cart = [];
+            }
+            syncSelectedSizes();
+        }
+
+        function saveProducts() {
+            try {
+                localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
+            } catch (e) {
+                showToast("Warning: Large image data may exceed browser storage limit.");
+            }
+        }
+
+        function saveSettings() {
+            try {
+                localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(settings));
+            } catch (e) {
+                showToast("Warning: Emblem image is large; if exporting HTML, use Export HTML directly.");
+            }
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem(STORAGE_KEYS.CART, JSON.stringify(cart));
+            } catch (e) {}
+        }
+
+        function syncSelectedSizes() {
+            products.forEach(p => {
+                if (!p.sizes || p.sizes.length === 0) p.sizes = ["S", "M", "L", "XL"];
+                if (!selectedSizes[p.id] || !p.sizes.includes(selectedSizes[p.id])) {
+                    selectedSizes[p.id] = p.sizes[0];
+                }
+            });
+        }
+
+        // --- Maluti (LSL / M) Formatting ---
+        function formatMaluti(amount) {
+            const num = Number(amount) || 0;
+            const formatted = num.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            if (settings.currencyDisplay === "BOTH") {
+                return `M ${formatted} / R ${formatted}`;
+            }
+            return `M ${formatted}`;
+        }
+
+        window.setCurrencyDisplay = function(mode) {
+            settings.currencyDisplay = mode;
+            saveSettings();
+            applyBrandingToUI();
+            renderProducts();
+            renderCart();
+            showToast(mode === "M" ? "Showing prices in Maluti (M / LSL)" : "Showing Maluti (M) & Rands (R)");
+        };
+
+        // --- Emblem Logo & Brand UI Rendering ---
+        function getFallbackCrestSVG() {
+            return `
+                <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-obsidian via-charcoal to-obsidian text-center p-2 select-none">
+                    <div class="w-8 h-8 rounded-full border border-gold/60 flex items-center justify-center mb-1">
+                        <svg viewBox="0 0 24 24" class="w-4 h-4 fill-gold" aria-hidden="true">
+                            <path d="M3 18h18v2H3v-2zm1-9l4.5 4L12 7l3.5 6L20 9l-1.5 8h-13L4 9z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-[10px] font-black tracking-wider metallic-gold-text leading-none">K'n'B</span>
+                    <span class="text-[7px] uppercase tracking-widest text-silver/80 mt-0.5 leading-none">WEAR IT. LOVE IT.</span>
+                </div>
+            `;
+        }
+
+        function applyBrandingToUI() {
+            document.documentElement.style.setProperty("--accent-color", settings.accentColor || "#D4AF37");
+
+            // Update logo slots (Navbar, Hero Showcase, Footer)
+            const logoSlots = document.querySelectorAll(".brand-logo-slot");
+            logoSlots.forEach(slot => {
+                if (settings.logoDataUrl && settings.logoDataUrl.trim() !== "") {
+                    slot.innerHTML = `<img src="${escapeAttr(settings.logoDataUrl)}" alt="${escapeAttr(settings.brandName)} Emblem" class="w-full h-full object-contain">`;
+                } else {
+                    slot.innerHTML = getFallbackCrestSVG();
+                }
+            });
+
+            // Studio preview sync
+            const studioImg = document.getElementById("emblem-studio-preview");
+            const studioPlaceholder = document.getElementById("emblem-studio-placeholder");
+            const logoInput = document.getElementById("brand-logo-input");
+            if (studioImg && studioPlaceholder && logoInput) {
+                if (settings.logoDataUrl) {
+                    studioImg.src = settings.logoDataUrl;
+                    studioImg.classList.remove("hidden");
+                    studioPlaceholder.classList.add("hidden");
+                } else {
+                    studioImg.src = "";
+                    studioImg.classList.add("hidden");
+                    studioPlaceholder.classList.remove("hidden");
+                }
+                logoInput.value = settings.logoDataUrl || "";
+            }
+
+            // Text & labels
+            document.getElementById("nav-brand-name").textContent = settings.brandName;
+            document.getElementById("nav-tagline").textContent = settings.tagline;
+            document.getElementById("hero-tagline-banner").textContent = `"${settings.tagline}"`;
+            document.getElementById("footer-brand-name").textContent = settings.brandName;
+            document.getElementById("footer-tagline").textContent = settings.tagline;
+            document.getElementById("footer-about-text").textContent = settings.about;
+            document.getElementById("footer-location").textContent = settings.location;
+            document.getElementById("footer-whatsapp").textContent = "+" + settings.whatsapp.replace(/^\+/, "");
+            document.getElementById("footer-email").textContent = settings.email;
+            document.getElementById("copyright-brand").textContent = settings.brandName;
+            document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+            document.getElementById("top-threshold-text").textContent = formatMaluti(settings.freeShippingThreshold);
+            document.getElementById("hero-currency-status").textContent =
+                settings.currencyDisplay === "BOTH" ? "Maluti (M) & Rands (R)" : "Maluti (M / LSL)";
+            document.getElementById("hero-product-count").textContent = `${products.length} ${products.length === 1 ? "Piece" : "Pieces"}`;
+
+            // Currency toggle button active state
+            const mBtn = document.getElementById("curr-m-btn");
+            const bothBtn = document.getElementById("curr-both-btn");
+            if (settings.currencyDisplay === "M") {
+                mBtn.className = "px-2.5 py-1 rounded-full text-[11px] font-extrabold tracking-wider bg-gold text-obsidian transition-all";
+                bothBtn.className = "px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider text-silver hover:text-ivory transition-all";
+            } else {
+                bothBtn.className = "px-2.5 py-1 rounded-full text-[11px] font-extrabold tracking-wider bg-gold text-obsidian transition-all";
+                mBtn.className = "px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wider text-silver hover:text-ivory transition-all";
+            }
+        }
+
+        // --- Category Tabs & Catalog Rendering ---
+        function renderCategoryTabs() {
+            const tabsContainer = document.getElementById("category-tabs");
+            const uniqueCategories = ["All", ...new Set(products.map(p => p.category).filter(Boolean))];
+            if (!uniqueCategories.includes(activeCategory)) {
+                activeCategory = "All";
+            }
+
+            tabsContainer.innerHTML = uniqueCategories.map(cat => {
+                const isActive = cat === activeCategory;
+                return `
+                    <button
+                        onclick="selectCategory('${escapeAttr(cat)}')"
+                        class="shrink-0 px-4 py-2 rounded-full text-xs uppercase tracking-widest font-extrabold transition-all ${
+                            isActive
+                                ? "luxury-gold-btn shadow-md"
+                                : "bg-charcoal text-silver hover:text-ivory border border-white/10"
+                        }"
+                    >
+                        ${escapeHtml(cat)}
+                    </button>
+                `;
+            }).join("");
+        }
+
+        window.selectCategory = function(cat) {
+            activeCategory = cat;
+            renderCategoryTabs();
+            renderProducts();
+        };
+
+        function renderProducts() {
+            renderCategoryTabs();
+            syncSelectedSizes();
+
+            let list = products.filter(p => {
+                const matchesCat = activeCategory === "All" || p.category === activeCategory;
+                const q = searchTerm.trim().toLowerCase();
+                const matchesSearch = !q ||
+                    p.name.toLowerCase().includes(q) ||
+                    p.category.toLowerCase().includes(q) ||
+                    (p.description || "").toLowerCase().includes(q);
+                return matchesCat && matchesSearch;
+            });
+
+            if (sortMode === "price-asc") {
+                list.sort((a, b) => a.price - b.price);
+            } else if (sortMode === "price-desc") {
+                list.sort((a, b) => b.price - a.price);
+            } else if (sortMode === "name-asc") {
+                list.sort((a, b) => a.name.localeCompare(b.name));
+            }
+
+            const grid = document.getElementById("products-grid");
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full bg-charcoal border border-white/10 rounded-3xl p-12 text-center">
+                        <p class="font-display text-xl font-bold text-ivory">No matching products found</p>
+                        <p class="text-xs text-silver/70 mt-1 mb-5">Try another search term or add your own product to the store.</p>
+                        <button onclick="openStudioModal('product')" class="luxury-gold-btn px-6 py-3 rounded-full text-xs uppercase tracking-wider font-black">+ Add Product</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = list.map(prod => {
+                const activeSize = selectedSizes[prod.id] || prod.sizes[0];
+                const fallbackImg = `https://placehold.co/600x750/18181D/D4AF37?text=${encodeURIComponent(prod.name)}`;
+
+                return `
+                    <article class="group bg-charcoal border border-white/10 hover:border-gold/45 rounded-3xl p-4 flex flex-col justify-between transition-all duration-300 shadow-lg">
+                        <div>
+                            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface mb-4">
+                                <img
+                                    src="${escapeAttr(prod.image)}"
+                                    onerror="this.src='${fallbackImg}'"
+                                    alt="${escapeAttr(prod.name)}"
+                                    onclick="openQuickView(${prod.id})"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                                >
+                                ${prod.badge ? `
+                                    <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-obsidian/90 border border-gold/40 text-gold text-[10px] uppercase tracking-widest font-extrabold">
+                                        ${escapeHtml(prod.badge)}
+                                    </span>
+                                ` : ""}
+                                <button
+                                    onclick="openQuickView(${prod.id})"
+                                    aria-label="Quick View ${escapeAttr(prod.name)}"
+                                    class="absolute top-3 right-3 w-9 h-9 rounded-full bg-obsidian/85 hover:bg-gold text-ivory hover:text-obsidian flex items-center justify-center border border-white/15 transition-colors"
+                                >
+                                    <i data-lucide="eye" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-[0.2em] text-silver/65 font-bold">${escapeHtml(prod.category)}</p>
+                                    <h3 onclick="openQuickView(${prod.id})" class="font-display text-base sm:text-lg font-extrabold text-ivory group-hover:text-gold transition-colors cursor-pointer mt-0.5 leading-snug">
+                                        ${escapeHtml(prod.name)}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="mt-2.5 inline-block px-3 py-1 rounded-xl bg-surface border border-gold/25">
+                                <span class="font-display text-sm sm:text-base font-black text-gold">${formatMaluti(prod.price)}</span>
+                            </div>
+
+                            ${prod.description ? `
+                                <p class="text-xs text-silver/70 mt-2.5 line-clamp-2 leading-relaxed">${escapeHtml(prod.description)}</p>
+                            ` : ""}
+                        </div>
+
+                        <div class="pt-4 mt-4 border-t border-white/10 space-y-3">
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="text-[10px] uppercase tracking-wider text-silver/65 font-bold">Size:</span>
+                                <div class="flex flex-wrap gap-1">
+                                    ${prod.sizes.map(sz => `
+                                        <button
+                                            onclick="pickProductSize(${prod.id}, '${escapeAttr(sz)}')"
+                                            class="px-2.5 py-1 rounded-lg text-[11px] font-extrabold transition-colors ${
+                                                sz === activeSize
+                                                    ? "bg-gold text-obsidian"
+                                                    : "bg-surface text-silver hover:text-ivory"
+                                            }"
+                                        >
+                                            ${escapeHtml(sz)}
+                                        </button>
+                                    `).join("")}
+                                </div>
+                            </div>
+
+                            <button
+                                onclick="addToCart(${prod.id})"
+                                class="w-full py-3 rounded-xl luxury-gold-btn text-xs uppercase tracking-[0.18em] font-black shadow-md flex items-center justify-center gap-2 transition-all"
+                            >
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                                <span>Add to Bag (${escapeHtml(activeSize)})</span>
+                            </button>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+
+            renderManageProductsList();
+            lucide.createIcons();
+        }
+
+        window.pickProductSize = function(productId, size) {
+            selectedSizes[productId] = size;
+            renderProducts();
+        };
+
+        // --- Manage Products List (Edit / Delete) ---
+        function renderManageProductsList() {
+            const container = document.getElementById("manage-products-list");
+            const countEl = document.getElementById("manager-item-count");
+            countEl.textContent = products.length;
+
+            if (products.length === 0) {
+                container.innerHTML = `<p class="text-xs text-silver/65 py-4 text-center">No products in catalog yet. Click "+ Add Product" to add your first item.</p>`;
+                return;
+            }
+
+            container.innerHTML = products.map(p => {
+                const fallbackImg = `https://placehold.co/80x96/18181D/D4AF37?text=Item`;
+                return `
+                    <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <img src="${escapeAttr(p.image)}" onerror="this.src='${fallbackImg}'" alt="${escapeAttr(p.name)}" class="w-12 h-14 rounded-xl object-cover bg-surface border border-white/10 shrink-0">
+                            <div class="min-w-0">
+                                <p class="font-display text-sm font-bold text-ivory truncate">${escapeHtml(p.name)}</p>
+                                <p class="text-xs text-silver/70">${escapeHtml(p.category)} &bull; Sizes: <span class="text-champagne font-semibold">${escapeHtml(p.sizes.join(", "))}</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
+                            <span class="font-display text-sm font-black text-gold">${formatMaluti(p.price)}</span>
+                            <button onclick="startEditProduct(${p.id})" class="px-3 py-1.5 rounded-lg bg-surface hover:bg-gold text-ivory hover:text-obsidian border border-white/15 text-xs font-bold transition-colors">
+                                Edit
+                            </button>
+                            <button onclick="deleteProduct(${p.id})" class="px-3 py-1.5 rounded-lg bg-surface hover:bg-terracotta text-silver hover:text-white border border-white/15 text-xs font-bold transition-colors">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        window.startEditProduct = function(productId) {
+            const prod = products.find(p => p.id === productId);
+            if (!prod) return;
+
+            openStudioModal("product");
+            document.getElementById("edit-product-id").value = prod.id;
+            document.getElementById("prod-name").value = prod.name;
+            document.getElementById("prod-category").value = prod.category;
+            document.getElementById("prod-price").value = prod.price;
+            document.getElementById("prod-sizes").value = prod.sizes.join(", ");
+            document.getElementById("prod-badge").value = prod.badge || "";
+            document.getElementById("prod-image-url").value = prod.image || "";
+            document.getElementById("prod-image-preview").src = prod.image || "https://placehold.co/120x140/18181D/D4AF37?text=Preview";
+            document.getElementById("prod-description").value = prod.description || "";
+            document.getElementById("save-product-submit-btn").textContent = "Update Product";
+        };
+
+        window.deleteProduct = function(productId) {
+            products = products.filter(p => p.id !== productId);
+            cart = cart.filter(item => item.productId !== productId);
+            saveProducts();
+            saveCart();
+            applyBrandingToUI();
+            renderProducts();
+            renderCart();
+            showToast("Product removed from catalog");
+        };
+
+        window.resetToDefaultStore = function() {
+            products = [...DEFAULT_PRODUCTS];
+            settings = { ...DEFAULT_SETTINGS };
+            saveProducts();
+            saveSettings();
+            syncSelectedSizes();
+            applyBrandingToUI();
+            renderProducts();
+            renderCart();
+            showToast("Store reset to default K 'n' B catalog");
+        };
+
+        // --- Quick View Modal ---
+        window.openQuickView = function(productId) {
+            const prod = products.find(p => p.id === productId);
+            if (!prod) return;
+            const activeSize = selectedSizes[prod.id] || prod.sizes[0];
+            const fallbackImg = `https://placehold.co/600x750/18181D/D4AF37?text=${encodeURIComponent(prod.name)}`;
+
+            document.getElementById("quickview-body").innerHTML = `
+                <div class="aspect-[4/5] md:aspect-auto bg-surface">
+                    <img src="${escapeAttr(prod.image)}" onerror="this.src='${fallbackImg}'" alt="${escapeAttr(prod.name)}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-gold font-extrabold">${escapeHtml(prod.category)}</span>
+                        <h3 class="font-display text-2xl font-black text-ivory mt-1">${escapeHtml(prod.name)}</h3>
+                        <p class="font-display text-xl font-black text-gold mt-2">${formatMaluti(prod.price)}</p>
+                        <p class="text-xs sm:text-sm text-silver/80 leading-relaxed mt-4">${escapeHtml(prod.description || "Signature K 'n' B Clothing piece.")}</p>
+
+                        <div class="mt-6">
+                            <span class="block text-xs font-bold uppercase tracking-wider text-champagne mb-2">Select Size</span>
+                            <div class="flex flex-wrap gap-2">
+                                ${prod.sizes.map(sz => `
+                                    <button
+                                        onclick="pickProductSize(${prod.id}, '${escapeAttr(sz)}'); openQuickView(${prod.id});"
+                                        class="px-4 py-2 rounded-xl text-xs font-extrabold border transition-colors ${
+                                            sz === activeSize
+                                                ? "bg-gold text-obsidian border-gold"
+                                                : "bg-surface text-silver border-white/15 hover:border-gold"
+                                        }"
+                                    >
+                                        ${escapeHtml(sz)}
+                                    </button>
+                                `).join("")}
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        onclick="addToCart(${prod.id}); closeQuickView();"
+                        class="mt-8 w-full py-4 rounded-full luxury-gold-btn text-xs uppercase tracking-[0.2em] font-black shadow-lg"
+                    >
+                        Add to Bag &bull; ${formatMaluti(prod.price)}
+                    </button>
+                </div>
+            `;
+
+            const modal = document.getElementById("quickview-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            lucide.createIcons();
+        };
+
+        window.closeQuickView = function() {
+            const modal = document.getElementById("quickview-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        };
+
+        // --- Studio Modal Controls ---
+        window.openStudioModal = function(tab = "product") {
+            const modal = document.getElementById("studio-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            populateBrandingInputs();
+            switchStudioTab(tab);
+            lucide.createIcons();
+        };
+
+        window.closeStudioModal = function() {
+            const modal = document.getElementById("studio-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        };
+
+        window.switchStudioTab = function(tab) {
+            const prodTab = document.getElementById("studio-tab-product");
+            const brandTab = document.getElementById("studio-tab-branding");
+            const prodBtn = document.getElementById("tab-btn-product");
+            const brandBtn = document.getElementById("tab-btn-branding");
+
+            if (tab === "branding") {
+                prodTab.classList.add("hidden");
+                brandTab.classList.remove("hidden");
+                brandBtn.className = "px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider luxury-gold-btn";
+                prodBtn.className = "px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-surface text-silver hover:text-ivory border border-white/10";
+            } else {
+                brandTab.classList.add("hidden");
+                prodTab.classList.remove("hidden");
+                prodBtn.className = "px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider luxury-gold-btn";
+                brandBtn.className = "px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-surface text-silver hover:text-ivory border border-white/10";
+            }
+        };
+
+        function populateBrandingInputs() {
+            document.getElementById("brand-name-input").value = settings.brandName;
+            document.getElementById("brand-tagline-input").value = settings.tagline;
+            document.getElementById("brand-whatsapp-input").value = settings.whatsapp;
+            document.getElementById("brand-threshold-input").value = settings.freeShippingThreshold;
+            document.getElementById("brand-location-input").value = settings.location;
+            document.getElementById("brand-accent-input").value = settings.accentColor || "#D4AF37";
+            document.getElementById("brand-show-rands-input").checked = settings.currencyDisplay === "BOTH";
+            document.getElementById("brand-logo-input").value = settings.logoDataUrl || "";
+        }
+
+        window.clearProductForm = function() {
+            document.getElementById("edit-product-id").value = "";
+            document.getElementById("product-form").reset();
+            document.getElementById("prod-sizes").value = "S, M, L, XL";
+            document.getElementById("prod-image-preview").src = "https://placehold.co/120x140/18181D/D4AF37?text=Preview";
+            document.getElementById("save-product-submit-btn").textContent = "Save Product to Store";
+        };
+
+        // Product Image File Upload -> Data URL
+        document.getElementById("prod-image-file").addEventListener("change", function(e) {
+            const file = e.target.files && e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const dataUrl = evt.target.result;
+                document.getElementById("prod-image-url").value = dataUrl;
+                document.getElementById("prod-image-preview").src = dataUrl;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById("prod-image-url").addEventListener("input", function(e) {
+            const val = e.target.value.trim();
+            if (val) {
+                document.getElementById("prod-image-preview").src = val;
+            }
+        });
+
+        // Save / Update Product Form Submit
+        document.getElementById("product-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const editId = document.getElementById("edit-product-id").value;
+            const name = document.getElementById("prod-name").value.trim();
+            const category = document.getElementById("prod-category").value.trim() || "Streetwear";
+            const price = parseFloat(document.getElementById("prod-price").value);
+            const sizesRaw = document.getElementById("prod-sizes").value.trim();
+            const sizes = sizesRaw ? sizesRaw.split(",").map(s => s.trim()).filter(Boolean) : ["S", "M", "L", "XL"];
+            const badge = document.getElementById("prod-badge").value.trim();
+            const imageVal = document.getElementById("prod-image-url").value.trim();
+            const description = document.getElementById("prod-description").value.trim();
+
+            if (!name || isNaN(price) || price <= 0) {
+                showToast("Please enter a valid product name and Maluti price.");
+                return;
+            }
+
+            const finalImage = imageVal || `https://placehold.co/600x750/18181D/D4AF37?text=${encodeURIComponent(name)}`;
+
+            if (editId) {
+                const idx = products.findIndex(p => String(p.id) === String(editId));
+                if (idx > -1) {
+                    products[idx] = {
+                        ...products[idx],
+                        name,
+                        category,
+                        price,
+                        sizes,
+                        badge,
+                        image: finalImage,
+                        description
+                    };
+                    showToast(`Updated "${name}" (${formatMaluti(price)})`);
+                }
+            } else {
+                const newProduct = {
+                    id: Date.now(),
+                    name,
+                    category,
+                    price,
+                    sizes,
+                    badge: badge || "New Drop",
+                    description: description || "K 'n' B Clothing signature streetwear — WEAR IT. LOVE IT.",
+                    image: finalImage
+                };
+                products.unshift(newProduct);
+                selectedSizes[newProduct.id] = newProduct.sizes[0];
+                showToast(`Added "${name}" (${formatMaluti(price)})`);
+            }
+
+            saveProducts();
+            applyBrandingToUI();
+            renderProducts();
+            clearProductForm();
+            closeStudioModal();
+        });
+
+        // Emblem File Upload -> Data URL
+        document.getElementById("emblem-file-input").addEventListener("change", function(e) {
+            const file = e.target.files && e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                settings.logoDataUrl = evt.target.result;
+                document.getElementById("brand-logo-input").value = settings.logoDataUrl;
+                saveSettings();
+                applyBrandingToUI();
+                showToast("Emblem logo loaded & saved!");
+            };
+            reader.readAsDataURL(file);
+        });
+
+        window.clearCustomEmblem = function() {
+            settings.logoDataUrl = "";
+            document.getElementById("brand-logo-input").value = "";
+            saveSettings();
+            applyBrandingToUI();
+            showToast("Reverted to built-in Royal Crest emblem");
+        };
+
+        window.saveBrandingSettings = function() {
+            settings.brandName = document.getElementById("brand-name-input").value.trim() || DEFAULT_SETTINGS.brandName;
+            settings.tagline = document.getElementById("brand-tagline-input").value.trim() || DEFAULT_SETTINGS.tagline;
+            settings.whatsapp = document.getElementById("brand-whatsapp-input").value.trim() || DEFAULT_SETTINGS.whatsapp;
+            settings.freeShippingThreshold = Math.max(0, parseFloat(document.getElementById("brand-threshold-input").value) || 0);
+            settings.location = document.getElementById("brand-location-input").value.trim() || DEFAULT_SETTINGS.location;
+            settings.accentColor = document.getElementById("brand-accent-input").value || "#D4AF37";
+            settings.currencyDisplay = document.getElementById("brand-show-rands-input").checked ? "BOTH" : "M";
+            const typedLogo = document.getElementById("brand-logo-input").value.trim();
+            if (typedLogo !== settings.logoDataUrl) {
+                settings.logoDataUrl = typedLogo;
+            }
+
+            saveSettings();
+            applyBrandingToUI();
+            renderProducts();
+            renderCart();
+            closeStudioModal();
+            showToast("Brand & emblem settings saved!");
+        };
+
+        // --- Shopping Bag & WhatsApp Checkout ---
+        window.addToCart = function(productId) {
+            const prod = products.find(p => p.id === productId);
+            if (!prod) return;
+            const size = selectedSizes[prod.id] || prod.sizes[0];
+
+            const existingIndex = cart.findIndex(item => item.productId === productId && item.size === size);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({ productId, size, qty: 1 });
+            }
+
+            saveCart();
+            renderCart();
+            showToast(`${prod.name} (${size}) added — ${formatMaluti(prod.price)}`);
+        };
+
+        window.changeCartQty = function(index, delta) {
+            if (!cart[index]) return;
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            saveCart();
+            renderCart();
+        };
+
+        window.removeCartItem = function(index) {
+            cart.splice(index, 1);
+            saveCart();
+            renderCart();
+        };
+
+        function getCartMetrics() {
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            const subtotal = cart.reduce((acc, item) => {
+                const prod = products.find(p => p.id === item.productId);
+                return acc + (prod ? prod.price * item.qty : 0);
+            }, 0);
+
+            const qualifiesFreeCourier = subtotal > 0 && subtotal >= settings.freeShippingThreshold;
+            const courier = subtotal === 0 ? 0 : (qualifiesFreeCourier ? 0 : settings.courierFee);
+            const grandTotal = subtotal + courier;
+
+            return { totalQty, subtotal, courier, grandTotal, qualifiesFreeCourier };
+        }
+
+        function renderCart() {
+            const { totalQty, subtotal, courier, grandTotal, qualifiesFreeCourier } = getCartMetrics();
+
+            document.getElementById("cart-count-badge").textContent = totalQty;
+            document.getElementById("drawer-items-count").textContent = `(${totalQty})`;
+            document.getElementById("cart-courier-fee").textContent = courier === 0 && subtotal > 0 ? "FREE" : formatMaluti(courier);
+            document.getElementById("cart-total-price").textContent = formatMaluti(grandTotal);
+            document.getElementById("whatsapp-checkout-btn").disabled = cart.length === 0;
+
+            const bannerEl = document.getElementById("cart-shipping-banner");
+            const barEl = document.getElementById("cart-shipping-bar");
+
+            if (settings.freeShippingThreshold <= 0 || qualifiesFreeCourier) {
+                bannerEl.innerHTML = `<span class="text-gold font-extrabold">Free Courier Unlocked!</span>`;
+                barEl.style.width = "100%";
+            } else {
+                const remaining = Math.max(0, settings.freeShippingThreshold - subtotal);
+                const pct = Math.min(100, (subtotal / settings.freeShippingThreshold) * 100);
+                bannerEl.innerHTML = `Add <strong class="text-gold">${formatMaluti(remaining)}</strong> more for free courier.`;
+                barEl.style.width = `${pct}%`;
+            }
+
+            const listEl = document.getElementById("cart-items-list");
+            if (cart.length === 0) {
+                listEl.innerHTML = `
+                    <div class="py-16 text-center space-y-3">
+                        <div class="w-14 h-14 rounded-full bg-surface border border-white/10 mx-auto flex items-center justify-center text-gold">
+                            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        </div>
+                        <p class="font-display text-lg font-bold text-ivory">Your bag is empty</p>
+                        <p class="text-xs text-silver/70 max-w-xs mx-auto">Add pieces from the catalog to calculate your total in Maluti (M).</p>
+                    </div>
+                `;
+            } else {
+                listEl.innerHTML = cart.map((item, idx) => {
+                    const prod = products.find(p => p.id === item.productId);
+                    if (!prod) return "";
+                    const fallbackImg = `https://placehold.co/100x120/18181D/D4AF37?text=Item`;
+
+                    return `
+                        <div class="flex gap-3.5 bg-surface border border-white/10 rounded-2xl p-3">
+                            <img src="${escapeAttr(prod.image)}" onerror="this.src='${fallbackImg}'" alt="${escapeAttr(prod.name)}" class="w-16 h-20 rounded-xl object-cover bg-obsidian shrink-0">
+                            <div class="flex-1 min-w-0 flex flex-col justify-between">
+                                <div class="flex items-start justify-between gap-2">
+                                    <div class="min-w-0">
+                                        <h4 class="font-display text-xs sm:text-sm font-bold text-ivory truncate">${escapeHtml(prod.name)}</h4>
+                                        <p class="text-[11px] text-silver/75 mt-0.5">Size: <strong class="text-gold">${escapeHtml(item.size)}</strong></p>
+                                    </div>
+                                    <button onclick="removeCartItem(${idx})" aria-label="Remove item" class="text-silver/50 hover:text-terracotta transition-colors">
+                                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+
+                                <div class="flex items-center justify-between mt-2">
+                                    <div class="inline-flex items-center rounded-full bg-obsidian border border-white/15">
+                                        <button onclick="changeCartQty(${idx}, -1)" class="w-7 h-7 flex items-center justify-center text-ivory hover:text-gold">
+                                            <i data-lucide="minus" class="w-3 h-3"></i>
+                                        </button>
+                                        <span class="px-2 text-xs font-bold text-ivory">${item.qty}</span>
+                                        <button onclick="changeCartQty(${idx}, 1)" class="w-7 h-7 flex items-center justify-center text-ivory hover:text-gold">
+                                            <i data-lucide="plus" class="w-3 h-3"></i>
+                                        </button>
+                                    </div>
+                                    <span class="font-display text-xs sm:text-sm font-extrabold text-gold">${formatMaluti(prod.price * item.qty)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join("");
+            }
+
+            lucide.createIcons();
+        }
+
+        window.checkoutViaWhatsApp = function() {
+            if (cart.length === 0) return;
+            const { subtotal, courier, grandTotal } = getCartMetrics();
+            const customerName = document.getElementById("customer-name-input").value.trim();
+
+            const lines = [
+                `*${settings.brandName}* — *${settings.tagline}*`,
+                settings.logoDataUrl && settings.logoDataUrl.startsWith("http") ? `Emblem: ${settings.logoDataUrl}` : `Emblem: K 'n' B Royal Crest`,
+                customerName ? `Customer: ${customerName}` : null,
+                `--------------------------------`,
+                ...cart.map(item => {
+                    const prod = products.find(p => p.id === item.productId);
+                    if (!prod) return "";
+                    return `• ${prod.name} [Size: ${item.size}] x${item.qty} — M ${(prod.price * item.qty).toFixed(2)}`;
+                }).filter(Boolean),
+                `--------------------------------`,
+                `Subtotal: M ${subtotal.toFixed(2)}`,
+                `Courier: ${courier === 0 ? "FREE" : "M " + courier.toFixed(2)}`,
+                `*Total Due: M ${grandTotal.toFixed(2)}*`
+            ].filter(Boolean);
+
+            const cleanPhone = (settings.whatsapp || "26658000000").replace(/\D/g, "");
+            const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(lines.join("\n"))}`;
+            window.open(url, "_blank", "noopener,noreferrer");
+            showToast("WhatsApp order message generated in Maluti (M)!");
+        };
+
+        // --- Export Standalone Customized HTML ---
+        window.exportCustomizedHTML = function() {
+            try {
+                // Serialize current products & settings directly into the exported standalone document
+                const serializedProducts = JSON.stringify(products, null, 8);
+                const serializedSettings = JSON.stringify(settings, null, 8);
+
+                let fullHtml = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+                fullHtml = fullHtml.replace(
+                    /let products = \[\];[\s\S]*?let settings = \{ \.\.\.DEFAULT_SETTINGS \};/,
+                    `let products = ${serializedProducts};\n        let settings = ${serializedSettings};`
+                );
+                // Ensure exported page starts with the baked-in products & settings even if localStorage differs
+                fullHtml = fullHtml.replace(
+                    /function loadFromStorage\(\) \{[\s\S]*?syncSelectedSizes\(\);\s*\}/,
+                    `function loadFromStorage() {\n            try {\n                const savedCart = localStorage.getItem(STORAGE_KEYS.CART);\n                cart = savedCart ? JSON.parse(savedCart) : [];\n            } catch (err) { cart = []; }\n            syncSelectedSizes();\n        }`
+                );
+                fullHtml = fullHtml.replace(/<\/html>\s*$/i, "") + "\n</html>";
+
+                const blob = new Blob([fullHtml], { type: "text/html;charset=utf-8" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = "index.html";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+                showToast("Exported index.html — upload directly to your site's root folder!");
+            } catch (err) {
+                showToast("Unable to export HTML in this browser context.");
+            }
+        };
+
+        // --- Cart Drawer & Mobile Menu ---
+        function openCartDrawer() {
+            const backdrop = document.getElementById("cart-backdrop");
+            const drawer = document.getElementById("cart-drawer");
+            backdrop.classList.remove("hidden");
+            void backdrop.offsetWidth;
+            backdrop.classList.remove("opacity-0");
+            drawer.classList.remove("translate-x-full");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeCartDrawer() {
+            const backdrop = document.getElementById("cart-backdrop");
+            const drawer = document.getElementById("cart-drawer");
+            backdrop.classList.add("opacity-0");
+            drawer.classList.add("translate-x-full");
+            document.body.style.overflow = "";
+            setTimeout(() => backdrop.classList.add("hidden"), 300);
+        }
+
+        window.closeMobileMenu = function() {
+            document.getElementById("mobile-menu").classList.add("hidden");
+        };
+
+        // --- Toast & Escaping ---
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-text").textContent = msg;
+            toast.classList.remove("translate-y-24", "opacity-0");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add("translate-y-24", "opacity-0");
+            }, 3200);
+        }
+
+        function escapeHtml(str) {
+            return String(str || "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        function escapeAttr(str) {
+            return String(str || "")
+                .replace(/&/g, "&amp;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        // --- Event Listeners & Init ---
+        document.getElementById("open-cart-btn").addEventListener("click", openCartDrawer);
+        document.getElementById("close-cart-btn").addEventListener("click", closeCartDrawer);
+        document.getElementById("cart-backdrop").addEventListener("click", closeCartDrawer);
+
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+        document.querySelectorAll(".mobile-link").forEach(el => {
+            el.addEventListener("click", closeMobileMenu);
+        });
+
+        document.getElementById("catalog-search").addEventListener("input", (e) => {
+            searchTerm = e.target.value;
+            renderProducts();
+        });
+
+        document.getElementById("catalog-sort").addEventListener("change", (e) => {
+            sortMode = e.target.value;
+            renderProducts();
+        });
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadFromStorage();
+            applyBrandingToUI();
+            renderProducts();
+            renderCart();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
